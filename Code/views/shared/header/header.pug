@@ -4,4 +4,6 @@ div(id='page-header')
       img(class='logo', src='/images/logo.svg')
 
     div(class='col-md-6 hidden-md-down note')
-      span Here should be implemented dropdown country select
+      select(name="countySelect" id="countrySelect" class="form-control")
+        for country in countries 
+          option(value=`${country.code}`) #{country.name}

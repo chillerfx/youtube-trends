@@ -3,7 +3,7 @@ extends ../index
 block youtube
   div(id='youtube')
     div(class='row')
-      each video in videos
+      for video in videos
         div(class='col-lg-4 col-md-6 col-sm-12')
           a(class='card', href='/youtube/'+video.id)
             div(class='img-container')

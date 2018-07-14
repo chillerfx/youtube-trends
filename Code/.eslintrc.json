@@ -5,7 +5,8 @@
     "node": true,
     "es6": true,
     "browser": true,
-    "mocha": true
+    "mocha": true,
+    "jquery": true
   },
   "plugins": ["flowtype", "mocha"],
   "parserOptions": {

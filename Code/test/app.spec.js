@@ -25,4 +25,24 @@ describe('Server', function() {
         done();
       });
   });
+  it('should redirect to trending video of country', (done) => {
+    chai.request(server)
+      .get('/youtube?country=LT')
+      .end((err, res) => {
+        res.should.have.status(200);
+        //res.should.be.html()
+        done()
+      })
+    it('should card with thubnail image', (done) => {
+      chai.request(server) 
+        .get('/youtube')
+        .end((err, res) => {
+          res.should.have.status(200);
+          //res.should.be.html();
+          /* @TODO add res body parsing to see if theres image*/
+          done()
+      });
+    });  
+  });
 });
+
